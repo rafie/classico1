@@ -1,0 +1,251 @@
+have_struct_member: checking for rb_method_entry_t.called_id in method.h... -------------------- no
+
+"x86_64-w64-mingw32-gcc -o conftest.exe -Ic:/Ruby/include/ruby-2.0.0/x64-mingw32 -Ic:/Ruby/include/ruby-2.0.0/ruby/backward -Ic:/Ruby/include/ruby-2.0.0 -I. -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0501 -D_FILE_OFFSET_BITS=64   -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -Lc:/Ruby/lib -L.      -lx64-msvcrt-ruby200  -lshell32 -lws2_32 -limagehlp -lshlwapi  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return 0;
+8: }
+/* end */
+
+"x86_64-w64-mingw32-gcc -Ic:/Ruby/include/ruby-2.0.0/x64-mingw32 -Ic:/Ruby/include/ruby-2.0.0/ruby/backward -Ic:/Ruby/include/ruby-2.0.0 -I. -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0501 -D_FILE_OFFSET_BITS=64   -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration   -c conftest.c"
+conftest.c:5:20: fatal error: method.h: No such file or directory
+compilation terminated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: #include <method.h>
+ 6: 
+ 7: /*top*/
+ 8: int s = (char *)&((rb_method_entry_t*)0)->called_id - (char *)0;
+ 9: int main(int argc, char **argv)
+10: {
+11:   if (argc > 1000000) {
+12:     printf("%p", &s);
+13:   }
+14: 
+15:   return 0;
+16: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for rb_control_frame_t.method_id in method.h... -------------------- no
+
+"x86_64-w64-mingw32-gcc -Ic:/Ruby/include/ruby-2.0.0/x64-mingw32 -Ic:/Ruby/include/ruby-2.0.0/ruby/backward -Ic:/Ruby/include/ruby-2.0.0 -I. -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0501 -D_FILE_OFFSET_BITS=64   -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration   -c conftest.c"
+conftest.c:5:20: fatal error: method.h: No such file or directory
+compilation terminated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: #include <method.h>
+ 6: 
+ 7: /*top*/
+ 8: int s = (char *)&((rb_control_frame_t*)0)->method_id - (char *)0;
+ 9: int main(int argc, char **argv)
+10: {
+11:   if (argc > 1000000) {
+12:     printf("%p", &s);
+13:   }
+14: 
+15:   return 0;
+16: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for rb_method_entry_t.called_id in method.h... -------------------- no
+
+"x86_64-w64-mingw32-gcc -Ic:/Ruby/include/ruby-2.0.0/x64-mingw32 -Ic:/Ruby/include/ruby-2.0.0/ruby/backward -Ic:/Ruby/include/ruby-2.0.0 -I. -Ic:/Ruby/include/ruby-2.0.0/ruby-2.0.0-p451  -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration   -c conftest.c"
+conftest.c:5:20: fatal error: method.h: No such file or directory
+compilation terminated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: #include <method.h>
+ 6: 
+ 7: /*top*/
+ 8: int s = (char *)&((rb_method_entry_t*)0)->called_id - (char *)0;
+ 9: int main(int argc, char **argv)
+10: {
+11:   if (argc > 1000000) {
+12:     printf("%p", &s);
+13:   }
+14: 
+15:   return 0;
+16: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for rb_control_frame_t.method_id in method.h... -------------------- no
+
+"x86_64-w64-mingw32-gcc -Ic:/Ruby/include/ruby-2.0.0/x64-mingw32 -Ic:/Ruby/include/ruby-2.0.0/ruby/backward -Ic:/Ruby/include/ruby-2.0.0 -I. -Ic:/Ruby/include/ruby-2.0.0/ruby-2.0.0-p451  -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration   -c conftest.c"
+conftest.c:5:20: fatal error: method.h: No such file or directory
+compilation terminated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: #include <method.h>
+ 6: 
+ 7: /*top*/
+ 8: int s = (char *)&((rb_control_frame_t*)0)->method_id - (char *)0;
+ 9: int main(int argc, char **argv)
+10: {
+11:   if (argc > 1000000) {
+12:     printf("%p", &s);
+13:   }
+14: 
+15:   return 0;
+16: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for rb_method_entry_t.called_id in method.h... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -Ic:/Ruby/include/ruby-2.0.0/x64-mingw32 -Ic:/Ruby/include/ruby-2.0.0/ruby/backward -Ic:/Ruby/include/ruby-2.0.0 -I. -Ic:/Gems/gems/debugger-ruby_core_source-1.3.2/lib/debugger/ruby_core_source/ruby-2.0.0-p451  -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration   -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: #include <method.h>
+ 6: 
+ 7: /*top*/
+ 8: int s = (char *)&((rb_method_entry_t*)0)->called_id - (char *)0;
+ 9: int main(int argc, char **argv)
+10: {
+11:   if (argc > 1000000) {
+12:     printf("%p", &s);
+13:   }
+14: 
+15:   return 0;
+16: }
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -E -Ic:/Ruby/include/ruby-2.0.0/x64-mingw32 -Ic:/Ruby/include/ruby-2.0.0/ruby/backward -Ic:/Ruby/include/ruby-2.0.0 -I. -Ic:/Gems/gems/debugger-ruby_core_source-1.3.2/lib/debugger/ruby_core_source/ruby-2.0.0-p451  -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for iseq.h... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -E -Ic:/Ruby/include/ruby-2.0.0/x64-mingw32 -Ic:/Ruby/include/ruby-2.0.0/ruby/backward -Ic:/Ruby/include/ruby-2.0.0 -I. -Ic:/Gems/gems/debugger-ruby_core_source-1.3.2/lib/debugger/ruby_core_source/ruby-2.0.0-p451  -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <iseq.h>
+/* end */
+
+--------------------
+
+have_header: checking for insns.inc... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -E -Ic:/Ruby/include/ruby-2.0.0/x64-mingw32 -Ic:/Ruby/include/ruby-2.0.0/ruby/backward -Ic:/Ruby/include/ruby-2.0.0 -I. -Ic:/Gems/gems/debugger-ruby_core_source-1.3.2/lib/debugger/ruby_core_source/ruby-2.0.0-p451  -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <insns.inc>
+/* end */
+
+--------------------
+
+have_header: checking for insns_info.inc... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -E -Ic:/Ruby/include/ruby-2.0.0/x64-mingw32 -Ic:/Ruby/include/ruby-2.0.0/ruby/backward -Ic:/Ruby/include/ruby-2.0.0 -I. -Ic:/Gems/gems/debugger-ruby_core_source-1.3.2/lib/debugger/ruby_core_source/ruby-2.0.0-p451  -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <insns_info.inc>
+/* end */
+
+--------------------
+
+have_header: checking for eval_intern.h... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -E -Ic:/Ruby/include/ruby-2.0.0/x64-mingw32 -Ic:/Ruby/include/ruby-2.0.0/ruby/backward -Ic:/Ruby/include/ruby-2.0.0 -I. -Ic:/Gems/gems/debugger-ruby_core_source-1.3.2/lib/debugger/ruby_core_source/ruby-2.0.0-p451  -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <eval_intern.h>
+/* end */
+
+--------------------
+
+have_type: checking for struct iseq_line_info_entry in vm_core.h,iseq.h... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -Ic:/Ruby/include/ruby-2.0.0/x64-mingw32 -Ic:/Ruby/include/ruby-2.0.0/ruby/backward -Ic:/Ruby/include/ruby-2.0.0 -I. -Ic:/Gems/gems/debugger-ruby_core_source-1.3.2/lib/debugger/ruby_core_source/ruby-2.0.0-p451  -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration   -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: #include <vm_core.h>
+ 6: #include <iseq.h>
+ 7: 
+ 8: /*top*/
+ 9: typedef struct iseq_line_info_entry conftest_type;
+10: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+block in <main>: checking for if rb_iseq_compile_with_option was added an argument filepath... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -Ic:/Ruby/include/ruby-2.0.0/x64-mingw32 -Ic:/Ruby/include/ruby-2.0.0/ruby/backward -Ic:/Ruby/include/ruby-2.0.0 -I. -Ic:/Gems/gems/debugger-ruby_core_source-1.3.2/lib/debugger/ruby_core_source/ruby-2.0.0-p451  -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <ruby.h>
+6: #include "vm_core.h"
+7: extern VALUE rb_iseq_new_main(NODE *node, VALUE filename, VALUE filepath);
+/* end */
+
+--------------------
+
