@@ -7,7 +7,7 @@ vendor/bundle
 .bundle
 
 lib/ruby_debug.bundle
-lib/ruby_debug.so
+# lib/ruby_debug.so
 
 ext/ruby_debug/breakpoint.c
 ext/ruby_debug/ruby_debug.c
