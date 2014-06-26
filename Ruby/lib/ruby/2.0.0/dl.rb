@@ -5,7 +5,7 @@ begin
 rescue LoadError
 end
 
-warn "DL is deprecated, please use Fiddle"
+# warn "DL is deprecated, please use Fiddle"
 
 module DL
   # Returns true if DL is using Fiddle, the libffi wrapper.
